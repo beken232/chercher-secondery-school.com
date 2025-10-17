@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chercher Secondary School - News & Events</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'school-blue': '#1e40af',
+                        'school-white': '#ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-school-white text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-school-blue text-school-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="logo/logo.png" alt="Chercher Secondary School Logo" class="h-10 w-10 mr-2">
+                    <span class="font-bold text-xl">Chercher Secondary School</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="hover:bg-blue-700 px-3 py-2 rounded">Home</a>
+                    <a href="about.html" class="hover:bg-blue-700 px-3 py-2 rounded">About Us</a>
+                    <a href="academics.html" class="hover:bg-blue-700 px-3 py-2 rounded">Academics</a>
+                    <a href="admissions.html" class="hover:bg-blue-700 px-3 py-2 rounded">Admissions</a>
+                    <a href="news.html" class="hover:bg-blue-700 px-3 py-2 rounded">News & Events</a>
+                    <a href="contact.html" class="hover:bg-blue-700 px-3 py-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-school-blue to-blue-500 text-school-white py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">News & Events</h1>
+                <p class="text-xl md:text-2xl mb-8">Stay Updated with School Activities</p>
+            </div>
+        </section>
+
+        <!-- Announcements Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12 text-school-blue">Latest Announcements</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4 text-school-blue">New Science Lab Opening</h3>
+                        <p class="text-sm text-gray-600 mb-2">Posted on October 1, 2023</p>
+                        <p>We are excited to announce the opening of our new state-of-the-art science laboratory.
+                            Students will have access to modern equipment for hands-on experiments.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4 text-school-blue">Parent-Teacher Conference</h3>
+                        <p class="text-sm text-gray-600 mb-2">Posted on September 25, 2023</p>
+                        <p>The annual parent-teacher conference will be held on November 15, 2023. Please schedule your
+                            appointments in advance.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4 text-school-blue">Sports Day 2024</h3>
+                        <p class="text-sm text-gray-600 mb-2">Posted on September 20, 2023</p>
+                        <p>Mark your calendars for our annual Sports Day on February 14, 2024. All students are
+                            encouraged to participate.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4 text-school-blue">Library Expansion</h3>
+                        <p class="text-sm text-gray-600 mb-2">Posted on September 15, 2023</p>
+                        <p>Our library is undergoing expansion to accommodate more books and digital resources. Expected
+                            completion: December 2023.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Section -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12 text-school-blue">Upcoming Events</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="overflow-x-auto">
+                        <table class="w-full table-auto">
+                            <thead>
+                                <tr class="bg-school-blue text-school-white">
+                                    <th class="px-4 py-2">Event</th>
+                                    <th class="px-4 py-2">Date</th>
+                                    <th class="px-4 py-2">Time</th>
+                                    <th class="px-4 py-2">Location</th>
+                                </tr>
+                            </thead>
+                            <tbody id="eventsTableBody">
+                                <!-- Events will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-school-blue text-school-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Information</h3>
+                    <p>Address: 123 School Street, City, Country</p>
+                    <p>Phone: +123 456 7890</p>
+                    <p>Email: info@cherchersecondary.edu</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html" class="hover:underline">About Us</a></li>
+                        <li><a href="academics.html" class="hover:underline">Academics</a></li>
+                        <li><a href="admissions.html" class="hover:underline">Admissions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <p>Social media links will be added here.</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-blue-400 text-center">
+                <p>&copy; 2023 Chercher Secondary School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        async function loadEvents() {
+            try {
+                const response = await fetch('http://localhost:3000/events');
+                const events = await response.json();
+
+                const tbody = document.getElementById('eventsTableBody');
+                tbody.innerHTML = '';
+
+                events.forEach((event, index) => {
+                    const rowClass = index % 2 === 0 ? '' : 'bg-gray-50';
+                    const row = `
+                        <tr class="${rowClass}">
+                            <td class="border px-4 py-2">${event.title}</td>
+                            <td class="border px-4 py-2">${new Date(event.date).toLocaleDateString()}</td>
+                            <td class="border px-4 py-2">All Day</td>
+                            <td class="border px-4 py-2">${event.location}</td>
+                        </tr>
+                    `;
+                    tbody.innerHTML += row;
+                });
+            } catch (error) {
+                console.error('Error loading events:', error);
+            }
+        }
+
+        // Load events when page loads
+        window.addEventListener('load', loadEvents);
+    </script>
+</body>
+
+</html>
